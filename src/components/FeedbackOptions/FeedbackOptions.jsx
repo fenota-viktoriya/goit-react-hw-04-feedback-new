@@ -5,7 +5,7 @@ import { AiOutlineSmile, AiOutlineFrown, AiOutlineMeh } from 'react-icons/ai';
 export function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <BtnDiv>
-      {Object.keys(options).map(option => (
+      {options.map(option => (
         <BtnFeedback
           key={option}
           type="button"
