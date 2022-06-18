@@ -10,6 +10,7 @@ export function App() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
   const feedBackOptions = ['good', 'neutral', 'bad'];
+  const state = [good, neutral, bad];
 
   const changeState = e => {
     const option = e.currentTarget.name;
@@ -29,7 +30,7 @@ export function App() {
   };
 
   const countTotalFeedback = () => {
-    return good + neutral + bad;
+    return state.reduce((acc, value) => acc + value);
   };
 
   const countPositiveFeedbackPercentage = () => {
